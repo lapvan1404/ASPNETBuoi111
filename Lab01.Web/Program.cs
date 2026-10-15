@@ -26,6 +26,8 @@ namespace Lab01.Web
                 pattern: "{controller=Home}/{action=Index}/{id?}")
                 .WithStaticAssets();
 
+            app.MapGet("/health", () => "LAB01_OK");
+
             app.Run();
         }
     }
